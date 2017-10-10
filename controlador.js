@@ -13,7 +13,7 @@ app.controller('picoCtrl',function($scope){
     
     ]
    };
-   $scope.data2={
+   /*$scope.data2={
    		model: null,
     availableOptions: [
       {id: '1', name: '1:00'},
@@ -41,15 +41,15 @@ app.controller('picoCtrl',function($scope){
       {id: '23', name: '23:00'},
       {id: '24', name: '24:00'}
     ]
-   };
+   };*/
 	$scope.calcular = function () {
 		var placa;
 		var ultDig;
 		placa=$scope.placa;
 		ultDig=placa.substr(5,1);
-		console.log($scope.data.model);
+		//console.log($scope.data.model);
     var horaform=(($scope.horaSlct.getHours()*60)+$scope.horaSlct.getMinutes());
-    console.log(horaform);
+    //console.log(horaform);
     //console.log($scope.horaSlct.getHours()*60);
 
     var horaini1=420;
@@ -58,9 +58,6 @@ app.controller('picoCtrl',function($scope){
     var horafin2=1170;
 
     if((horaform>=horaini1 && horaform<=horafin1)||(horaform>=horaini2 && horaform<=horafin2)){
-
-
-
 
 
 		switch ($scope.data.model) {
@@ -112,7 +109,7 @@ app.controller('picoCtrl',function($scope){
 	};
 	 
 	$scope.presentar=function(){
-		console.log($scope.data2.model);
+		//console.log($scope.data2.model);
 
 		return($scope.resultado) ;
 	};
